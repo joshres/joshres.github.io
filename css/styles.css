@@ -1,0 +1,422 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(255, 244, 244);
+  letter-spacing: .75px;
+}
+
+/*************** Link Styles ***************/
+
+a {
+  text-decoration: none;
+}
+
+/*************** Nav Styles ***************/
+
+.dropdown-options {
+  display: inline-block;
+  position: relative;
+  bottom: calc(60px + 10vw);
+  width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.nav .name {
+  margin-right: auto;
+}
+
+.name {
+  color: white;
+  font-size: calc(20px + 6vw);
+  text-shadow: black 1px 0 10px;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.name:hover {
+  color: rgb(209, 238, 255);
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+  }
+
+/*************** Video Styles ***************/
+
+.video-container {
+  position: relative;
+  margin-bottom: -20px;
+}
+
+#my-video {
+  display: block;
+  position: relative;
+  top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border-radius: 50%;
+}
+
+/*************** Header Styles ***************/
+
+.welcome{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-family: 'Great Vibes';
+  font-size: calc(25px + 7vw);
+  margin: auto 0;
+}
+
+.header-p {
+  text-align: center;
+  padding: 0px 10px;
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+.about img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 70%;
+}
+
+/*************** Main Styles ***************/
+
+.projects h2 {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 20px;
+}
+
+.cards-container img{
+  max-width: 90%;
+}
+
+.projects-card {
+  min-height: 250px;
+  margin: 10px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.project-button {
+  margin: auto;
+}
+
+.project-link {
+  display: flex;
+  border: 1px solid grey;
+  background-color: rgb(216, 237, 250);
+  border-radius: 10px;
+  padding: 6.5px;
+  width: 8em;
+  margin: auto;
+}
+
+.project-link:hover {
+  background-color: rgb(125, 191, 232);
+  color: white;
+}
+
+.project-link:hover .arrow {
+  transform: translateX(8px);
+  }
+
+.contact {
+  text-align: center;
+}
+
+.text-container h3 {
+  margin-top: 0;
+}
+
+/*************** Hamburger Menu ***************/
+
+
+.drop-menu {
+  transition: all .3s ease-in-out;
+  border: none;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.drop-menu:hover { 
+  transform: scale(1.2); 
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + .30rem);
+  width: 40%;
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 30%;
+  background-color: rgb(125, 191, 232);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+.dropdown-list {
+padding-left: 0px;
+}
+
+.dropdown-list li {
+  list-style: none;
+  padding: 10px 0 10px 0;
+  font-size: 17.5px;
+}
+
+.dropdown-list a:hover {
+  color:rgb(221, 215, 215);
+}
+
+.dropdown-item {
+  color: white;
+  text-shadow: 1px 1px 2px gray;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display:block}
+
+
+/******* drop-menu styling ********/
+
+.drop-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  box-shadow: black 1px 0 10px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/*************** Footer Styles ***************/
+
+  .footer {
+    text-align: center;
+  }
+
+  .github {
+    background: none;
+    border: none;
+    list-style-type: none;
+  }
+
+  .web-links {
+    padding-left: 0;
+  }
+
+/************ Overlay ***************/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -650%;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  top: 0;
+  width: fit-content;
+  max-width: 450px;
+  height: 760px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: 7% auto auto;
+  position: sticky;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+  z-index: 1055;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.modal-image {
+  width: 100%;
+  position: relative;
+  top: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.modal-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-p-container {
+  line-height: 1.4;
+}
+
+.modal-text-container hr {
+  border: 1px solid rgb(227, 227, 227);
+  margin: 15px 0 15px 0
+}
+
+.hidden {
+  display: none;
+}
+
+  /*************** Media Queries ***************/
+
+  @media screen and (min-width: 768px) {
+    .nav {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .projects-card {
+      flex-basis: calc(50% - 20px);
+      gap: 40px;
+      border-bottom: 1.5px solid black;
+      height: 200px;
+      width: 75%;
+      padding-top: 0;
+      padding-bottom: 40px;
+    }
+
+    .dropdown-options {
+      bottom: 12em;
+    }
+
+    #my-video {
+      width: 77%;
+    }
+
+    .projects h2 {
+      font-size: 28px;
+      padding-bottom: 20px;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: row-reverse;
+      margin: 0 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about img {
+      width: 200%;
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+
+    .header-p {
+      font-size: 1.2em;
+    }
+
+    .welcome-text {
+      font-size: calc(25px + 6vw);
+    }
+
+    .overlay {
+      bottom: -600%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .dropdown-options {
+      bottom: 18em;
+    }
+
+    .name {
+      font-size: calc(15px + 6vw);
+    }
+
+    .bar1, .bar2, .bar3 {
+      width: 45px;
+      height: 7px;
+    }
+
+    .projects-card {
+      display: flex;
+      flex-basis: 0;
+      border: none;
+      padding: 0;
+    }
+
+    .projects h2 {
+      font-size: 36px;
+    }
+
+    .overlay {
+      bottom: -500%;
+    }
+
+    .dropdown-list li {
+      font-size: 20px;
+    }
+  }
+
+
+
+
+/***********************************************/
+
