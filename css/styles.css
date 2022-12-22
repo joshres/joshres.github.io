@@ -121,6 +121,7 @@ a {
 }
 
 .project-link {
+  color: black;
   display: flex;
   border: 1px solid grey;
   background-color: rgb(216, 237, 250);
